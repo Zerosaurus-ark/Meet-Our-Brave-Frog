@@ -3,21 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet Our Brave Frog</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Brave Frog Crypto</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Dark background for a crypto feel */
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #212121;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #33ff33; /* Crypto green */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #33ff33;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #33ff33;
+        }
+
+        /* Hero Section Styles */
+        #hero {
+            background-image: url('frog_hero_background.jpg'); /* Replace with a relevant image */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 0;
+            border-bottom: 2px solid #33ff33;
+        }
+
+        #hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #33ff33;            color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #22bb22;
+        }
+
+        /* About Section Styles */
+        #about {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #33ff33;
+        }
+
+        /* Tokenomics Section Styles */
+        #tokenomics {
+            padding: 50px 0;
+            background-color: #212121;
+            border-bottom: 2px solid #33ff33;
+        }
+
+        #tokenomics h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #33ff33;
+            text-align: center;
+        }
+
+        .token-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .token-table th, .token-table td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .token-table th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Roadmap Section Styles */
+        #roadmap {
+            padding: 50px 0;
+        }
+
+        #roadmap h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #33ff33;
+            text-align: center;
+        }
+
+        .roadmap-timeline {
+            list-style: none;
+            padding: 0;
+        }
+
+        .roadmap-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            background-color: #33ff33;
+            border-radius: 50%;
+            border: 2px solid #212121;
+        }
+
+        .roadmap-item h3 {
+            margin-top: 0;
+            color: #33ff33;
+        }
+
+        /* Team Section Styles */
+        #team {
+            padding: 50px 0;
+            background-color: #212121;
+            border-bottom: 2px solid #33ff33;
+        }
+
+        #team h2 {
+            font-size: 2em;            margin-bottom: 20px;
+            color: #33ff33;
+            text-align: center;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;        }
+
+        .team-member {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #212121;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 2px solid #33ff33;
+        }
+
+        footer p {
+            margin: 0;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Meet Our Brave Frog!</h1>
+        <div class="container">
+            <h1>Brave Frog Crypto</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tokenomics">Tokenomics</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <img src="image.png" alt="Our frog">
-            <p>This little frog is a brave adventurer and has many stories to tell!</p>
-        </section>
-    </main>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Join the Brave Frog Revolution!</h2>
+            <p>Brave Frog Crypto is a decentralized meme token with a mission to bring fun and innovation to the crypto space. Inspired by our brave frog, we aim to create a community-driven ecosystem with unique rewards and utilities.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Brave Frog</h2>
+            <p>Brave Frog is more than just a meme; it represents resilience, community, and innovation. Our token is designed to reward holders and foster a vibrant ecosystem through various DeFi applications and community initiatives.</p>
+        </div>
+    </section>
+
+    <section id="tokenomics">
+        <div class="container">
+            <h2>Tokenomics</h2>
+            <p>Here’s a breakdown of our token distribution and key tokenomic features:</p>
+            <table class="token-table">
+                <thead>
+                    <tr>
+                        <th>Allocation</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Community</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>Liquidity Pool</td>
+                        <td>25%</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Development</td>
+                        <td>10%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <div class="container">
+            <h2>Roadmap</h2>
+            <ul class="roadmap-timeline">
+                <li class="roadmap-item">
+                    <h3>Phase 1: Launch</h3>
+                    <p>Token deployment, website launch, community building.</p>
+                </li>
+                <li class="roadmap-item">
+                    <h3>Phase 2: Expansion</h3>
+                    <p>Marketing campaigns, exchange listings, partnerships.</p>
+                </li>
+                <li class="roadmap-item">
+                    <h3>Phase 3: Utility</h3>
+                    <p>DeFi integrations, NFT marketplace, community rewards.</p>                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="team_member_1.jpg" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="team_member_2.jpg" alt="Team Member 2">
+                    <h3>Jane Smith</h3>                    <p>CTO</p>
+                </div>
+                <div class="team-member">
+                    <img src="team_member_3.jpg" alt="Team Member 3">
+                    <h3>Alice Johnson</h3>
+                    <p>Marketing Lead</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2025 Frog Adventures</p>
+        <div class="container">
+            <p>© 2025 Brave Frog Crypto. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
